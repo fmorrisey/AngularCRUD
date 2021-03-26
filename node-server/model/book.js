@@ -17,3 +17,5 @@ let Book = new Schema(
     collection: "books",
   }
 );
+
+model.exports = mongoose("Book", Book);
