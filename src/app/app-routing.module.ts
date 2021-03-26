@@ -6,10 +6,10 @@ import { BookDetailComponent } from './components/book-detail/book-detail.compon
 import { BooksListComponent } from './components/books-list/books-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'add-book' },
-  { path: 'books-list', component: BooksListComponent },
-  { path: 'add-book', component: AddBookComponent },
-  { path: 'edit-book/:id', component: BookDetailComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'add-book' }, // Create
+  { path: 'books-list', component: BooksListComponent }, // View
+  { path: 'add-book', component: AddBookComponent }, // Add
+  { path: 'edit-book/:id', component: BookDetailComponent }, // Details
 ];
 
 @NgModule({
