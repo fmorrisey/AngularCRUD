@@ -5,6 +5,7 @@ let express = require("express"),
   //   bodyParser = require("body-parser")
   mongoDB = require("./database/db");
 
+// ==========================================
 mongoose.Promise = global.Promise;
 mongoose
   .connect(mongoDB.db, {
@@ -20,7 +21,7 @@ mongoose
       console.log(`Database error: ${error}`);
     }
   );
-
+// ==========================================
 const bookRoute = require("./routes/book.routes");
 
 /* DEPRECATED
