@@ -1,9 +1,10 @@
-let express = require("express"),
+const express = require("express"),
   path = require("path"),
   mongoose = require("mongoose"),
   cors = require("cors"),
   //   bodyParser = require("body-parser")
-  mongoDB = require("./database/db");
+  mongoDB = require("./database/db"),
+  createError = require("http-errors");
 
 // ==========================================
 mongoose.Promise = global.Promise;
@@ -34,8 +35,8 @@ app.use(
 */
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Static directory path
