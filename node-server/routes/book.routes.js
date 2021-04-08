@@ -31,6 +31,7 @@ bookRoute.route("/").get((req, res) => {
 bookRoute.route("/read-book/:id").get((req, res) => {
   Book.findById(req.params.id, (error, data) => {
     if (error) {
+      console.log("Get Book: ", error);
       return next(error);
     } else {
       res.json(data);
