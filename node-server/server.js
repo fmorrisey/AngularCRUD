@@ -71,7 +71,7 @@ app.get("*", (req, res) => {
 // We need handles on these errors
 // Makes them easier to grab
 app.use(function (err, req, res, next) {
-  console.log(err.message);
+  console.log("ERROR MSG: ", err.message);
   if (!err.statusCode) err.statusCode = 500;
   res.status(err.statusCode).send(err.message);
 });

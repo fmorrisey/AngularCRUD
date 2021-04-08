@@ -58,7 +58,7 @@ bookRoute.route("/update-book/:id").put((req, res, next) => {
 });
 
 // Delete Book
-bookRoute.route("/delete-book/:id").delete((res, req, next) => {
+bookRoute.route("/delete-book/:id").delete((req, res, next) => {
   Book.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
