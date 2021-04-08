@@ -2,6 +2,7 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CrudService } from './../../service/crud.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { CurrencyPipe } from '@angular/common';
 @Component({
   selector: 'app-book-detail',
   templateUrl: './book-detail.component.html',
